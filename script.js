@@ -183,7 +183,7 @@ function removePlayerDisplay() {
 //Winning Line
 
 function drawWinningLine(cells) {
-  const canvas = createCanvas(cells);
+  const canvas = createCanvas();
   const context = canvas.getContext("2d");
   const { startX, startY, endX, endY } = calculateLineCoordinates(cells);
 
@@ -208,7 +208,7 @@ function drawWinningLine(cells) {
   }
 }
 
-function createCanvas(cells) {
+function createCanvas() {
   const canvas = document.createElement("canvas");
   const container = document.getElementById("container");
 
